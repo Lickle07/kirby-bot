@@ -3,13 +3,12 @@ import random
 
 class MyClient(discord.Client):
 
-    async def on_ready(self): #runs when bot joins
+    async def on_ready(self): 
         print('Logged in')
         print(self.user.name)
         print(self.user.id)
 
-    async def on_message(self, message): #runs on command
-        # we do not want the bot to reply to itself
+    async def on_message(self, message): 
         if message.author.id == self.user.id:
             return
 
@@ -36,14 +35,5 @@ class MyClient(discord.Client):
         if "kirby spam" in message.content.lower():
             await message.channel.send('<:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465><:kerbe:586965684920254465>'.format(message))
 
-        if message.content.startswith("obama gaming"):
-            await message.channel.send('obama gaming'.format(message))
-
-        if "yobama gaming" in message.content.lower():
-            await message.channel.send("shut up".format(message))
-
-        if "<@586581993819602956>" in message.content.lower():
-            await message.channel.send("don't mention me or my mom <@!237236044599263232> ever again".format(message))
-
 client = MyClient()
-client.run('NTg2NTgxOTkzODE5NjAyOTU2.XPqHjw.UIo7h9OfxeBH0-NJWwqxCuyiHI8')
+client.run('NTg2NTgxOTkzODE5NjAyOTU2.XPqHjw.UIo7h9OfxeBH0-NJWwqxCuyiHI1')
